@@ -16,28 +16,44 @@ Contact: 1901177100@qq.com
 - Possess basic data structure and algorithm analysis skills. Familiarity with HTTP and browser caching.
 - Familiarity with Node.js, Koa framework, and MySQL.
 
+## Education
+Beijing Institute of Technology  
+Bachelor's Degree in Economics  
+September 2019 - June 2023
+- Honors and Awards: Excellent Student, Outstanding Scholar, First-class Scholarship, Second-class Scholarship, Third Prize in National College English Competition
+- Relevant Courses: Internet Entrepreneurship Practice (100), Computer Fundamentals, Calculus (98), Linear Algebra, Probability Theory and Mathematical Statistics
+- Certificate: CET6 (581)
 
-## Presentations (Selected)
-|Year         |City        |Conference  | Title      |Slides      |Video       |
-| ----------- |----------- |----------- |----------- |----------- |----------- |
-|2022|Virtual|[IstioCon](https://events.istio.io/istiocon-2022)|[Tencent Music’s service mesh practice with Istio and Aeraki](https://events.istio.io/istiocon-2022/sessions/tencent-music-aeraki/)|[slides](/slides/tencent-music-service-mesh-practice-with-istio-and-aeraki.pdf)|[Video](https://www.youtube.com/watch?v=6t_yPsq4Pi4)|
-|2022|Virtual|[A2M](https://a2m.msup.com.cn/course?aid=2699&cid=15382)|[全栈服务网格 - Aeraki Mesh 助你在 Istio 服务网格中管理任何七层流量](https://a2m.msup.com.cn/course?aid=2699&cid=15382)|[slides](/slides/full-stack-service-mesh-a2m-20220422.pdf)||
-|2022|Virtual|[云原生正发声](https://cloud.tencent.com/developer/salon/live-1403)| [Areaki Mesh 在 2022 冬奥会视频直播应用中的服务网格实践](https://mp.weixin.qq.com/s/zp9q99mGyH2VD9Dij2owWg) | [Slides](http://localhost:1313/img/2022-03-30-aeraki-mesh-winter-olympics-practice/slides.pdf)|[Video](https://youtu.be/uXxatQTKzW8)|
-|2021|Virtual|[IstioCon](https://events.istio.io/istiocon-2021/)| [How to manage any layer-7 traffic in an Istio service mesh?](https://events.istio.io/istiocon-2021/sessions/how-to-manage-any-layer-7-traffic-in-an-istio-service-mesh/) | [Slides](/slides/how-to-manage-any-layer-7-traffic-in-istio.pdf)|[Video](https://www.youtube.com/watch?v=sBS4utF68d8)|
-|2020|Virtual|[CNBPS](https://www.cnbpa.org/)|[Istio 流量管理原理与协议扩展](https://cloud.tencent.com/developer/article/1723804)|[Slides](/slides/cnbps2020-istio-aeraki.pdf)|[Video](https://www.youtube.com/watch?v=lB5d4qbZqzU)|
-|2019|Chengdu|[Service Mesher Meetup](https://cloudnative.to/blog/service-mesh-meetup-chengdu-20191028/)|[What Can Service Mesh Learn From SDN?](https://cloudnative.to/blog/service-mesh-meetup-chengdu-20191028/)|[Slides](/slides/what-can-service-mesh-learn-from-sdn-servicemesher-meetup-20191026.pdf)|[Video](https://youtu.be/nGkxp-2OsKg)|
-|2019|Xi'an|ONAP Workshop|Service Mesh Practice with 5G Management System|[Slides](/slides/service-mesh-practice-with-5g-management-system-lfn.pdf)|
-|2018|Nanjing|[GNTC](https://www.bagevent.com/event/1624048?aId=)|[Service Mesh in Action with ONAP](https://www.sdnlab.com/22596.html)|
-|2017|Santa Clara|[NAP Developer Forum](https://wiki.onap.org/display/DW/ONAP+Beijing+Release+Developer+Forum%2C+Dec.+11-13%2C+2017%2C+Santa+Clara%2C+CA+US)|[MSB to Support Carrier Grade ONAP Microservice Architecture with Service Mesh](https://onapbeijing2017.sched.com/event/D5q2)|[Slides](https://wiki.onap.org/display/DW/MSB+Service+Mesh+Planning?preview=%2F20873876%2F20873874%2FMSB+to+Support+Carrier+Grade+ONAP+Microservice+Architecture+with+Service+Mesh.pdf)|
-|2017|Santa Clara|[ONS](https://wiki.onap.org/display/DW/ONAP@ONS2017)|Microservice Powered Orchestration|[Slides](https://wiki.onap.org/display/DW/ONAP@ONS2017?preview=%2F3245268%2F3245309%2FMicroservice+Powered+Orchestration+Architecture.pdf)|
-|2017|New Jersey|[ONAP Developer Event](https://wiki.onap.org/display/DW/ONAP+Project+Developer+Event%3A+May+2+-+5%2C+2017%2C+Middletown%2C+NJ%2C+USA)|MSB Technical Deep Dive and ONAP Use Cases|[Slides](https://www.slideshare.net/HuabingZhao/msb-depp-dive/)|
-|2017|Paris|[ONAP Developer Event](https://wiki.onap.org/display/DW/ONAP+Developer+Event+September+25-28%2C+2017%2C+Paris-Saclay%2C+France)|[Microservice Bus Tutorial](https://wiki.onap.org/display/DW/September+26-28+Topics#September2628Topics-M2)|[Slides](https://www.slideshare.net/HuabingZhao/microservice-bus-tutorial)|
+## Internship Experience
+Yidu Cloud Technology Co., Ltd. (Beijing)  
+Front-end Development Intern, Data Platform Business Unit  
+August 2022 - April 2023  
+Tech Stack: Vue + Element-ui + Sass + Echarts  
+- Responsible for developing large screen visualizations, adapting to large screens, using gsap to display animation effects, and implementing seamless scrolling with the vue-seamless-scroll plugin.
+- Packaged Echarts, unified data return format with the backend, and allowed dynamic configuration of chart data and types by the backend. Achieved backend-driven frontend page views, reducing maintenance costs.
+- Refactored the medical record details page using virtual scrolling to improve initial loading speed.
+- Packaged business components such as table, modal, and form in the backend management system, dynamically rendered using configuration options. Extracted and encapsulated components using techniques such as slots, mixins, and component communication to improve project maintainability.
 
-## Open Source Projects
-|Project      |Role        |  Website   | GitHub     |
-| ----------- |----------- |----------- |----------- |
-| Aeraki Mesh | Creator    | https://aeraki.net  | http://github.com/aeraki-mesh |
-| Istio       | Contributor| https://istio.io    | https://github.com/istio/istio|
-| Envoy       | Contributor| https://www.envoyproxy.io |https://github.com/envoyproxy/envoy|
-| ONAP        | PTL        | https://www.onap.org||
-| hugo-theme-cleanwhite | Creator    | https://themes.gohugo.io/themes/hugo-theme-cleanwhite  | https://github.com/zhaohuabing/hugo-theme-cleanwhite |
+## Project Experience
+#### 1. Music Player (Mini Program)  
+###### Simulated QQ Music mini program using the Netease Cloud public API. It includes pages such as home, recommended songs, recommended videos, and playlist display, as well as song playback.  
+Tech Stack: WXML + WXSS + JavaScript + Vant
+- Optimized package size by utilizing subpackage loading, manually removing unused components from Vant, and manually encapsulating debounce functions. Achieved a 60% reduction in package size.
+- By using WXS, similar to filters and computed properties in Vue, we can achieve functionalities like time formatting, string-to-array conversion, and string truncation in WXML.
+- Leveraging the swiper component, we implemented horizontal switching between songs and lyrics on the song playback page.
+#### 2. JSON Schema-based Form Generator (PC)  
+###### A form generator based on Vue.js and JSON Schema. With a given JSON Schema, it can generate corresponding form fields. Basic components include radio buttons, dropdowns, date pickers, file uploads, email inputs, URL inputs, etc. Supports custom components, custom error message configuration, and validation rules.  
+Tech Stack: Vue3 + TypeScript + Ajv.js + JSS + Vite + Vitest  
+- We utilized Ajv for form data validation, ajv-i18n for converting error messages to different languages, and ajv-errors for custom error messages.
+- Development was done using JSX combined with JSS, providing excellent type support and flexibility.
+- The provide and inject pattern was used to pass information across component hierarchies, resolving circular reference issues.
+- Code style was enforced using eslint and prettier for code formatting. Unit tests were conducted using Vitest to ensure code reliability.
+- Demo: https://vue3-json-schema-form.vercel.app/
+#### 3. Alibaba Front-end Internship Program  
+Web Front-end, Project Manager  
+September 2022 - October 2022  
+###### E-live Data, a live e-commerce data backend, visualizes and analyzes data from live e-commerce platforms. Rewarded as an excellent project.  
+PC Tech Stack: Vue3 + Element Plus + Axios + Pinia + Vite + Echarts
+- Implemented authorization functionality using tokens for identity verification and route guards for route interception. Different roles were mapped to different menu directories to generate dynamic route mappings.  
+- We encapsulated the basic request process and interceptors based on Axios. Customized components were developed using Element Plus to maintain a consistent style.  
+- As a project manager, I created development schedules and milestone plans to ensure the successful delivery of the PC version, Android app, and mini-program according to the project timeline.
