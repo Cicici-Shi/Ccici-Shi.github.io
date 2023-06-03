@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Cici Blog">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://zhaohuabing.com/img/bg.png">
+    <meta property="twitter:image" content="https://zhaohuabing.com/img/bg.png" />
+    
+
+    
+    <meta name="title" content="微前端" />
+    <meta property="og:title" content="微前端" />
+    <meta property="twitter:title" content="微前端" />
+    
+
+    
+    <meta name="description" content="施艳春，程序员, 开源爱好者，生活探险家 | 这里是 施艳春 的博客，与你一起发现更大的世界。">
+    <meta property="og:description" content="施艳春，程序员, 开源爱好者，生活探险家 | 这里是 施艳春 的博客，与你一起发现更大的世界。" />
+    <meta property="twitter:description" content="施艳春，程序员, 开源爱好者，生活探险家 | 这里是 施艳春 的博客，与你一起发现更大的世界。" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="施艳春, shiyanchun, Shiyanchun, 施艳春的网络日志, 施艳春的博客, Shiyanchun Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>微前端 | 施艳春的博客 | Shiyanchun Blog</title>
+
+    <link rel="canonical" href="/post/2023-03-25-micro-frontends/">
+
+    
+    
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hugo-theme-cleanwhite.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link rel="stylesheet" href="/css/font-awesome.all.min.css">
+
+    
+    
+
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Cici Blog</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">All Posts</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/tech/">tech</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/archive//">ARCHIVE</a></li>
+                    
+                        <li><a href="/about//">ABOUT</a></li>
+                    
+		            <li>
+                        <a href="/search"><i class="fa fa-search"></i></a>
+		           </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/bg.png')
+    }
+</style>
+
+<header class="intro-header" >
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        <a class="tag" href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                    </div>
+                    <h1>微前端</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        
+                            Posted by 
+                            
+                                     &#34;施艳春&#34;
+                             
+                            on 
+                            Saturday, March 25, 2023
+                            
+                            
+                            
+                            
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <h1 id="什么是微前端">什么是微前端</h1>
+<p>将不同的功能按照不同的维度拆分多个子应用，通过主应用来加载这些子应用。
+微前端的核心在于拆，拆完后再合</p>
+<h1 id="为什么要去用他">为什么要去用他？</h1>
+<ul>
+<li>不同的团队开发同一个应用，使用不同的技术栈？</li>
+<li>每个团队都可以独立开发，独立部署</li>
+<li>项目中一些老的应用代码嵌进来</li>
+</ul>
+<p>需要系统中的部件具备足够清晰的服务边界。<br>
+微前端的实现思想就是将一个应用划分成若干个子应用，将子应用打包成一个个的lib。当路径切换 时加载不同的子应用。这样每个子应用都是独立的，技术栈也不用做限制了！从而解决了前 端协同开发问题。</p>
+<h1 id="目前主流的微前端框架">目前主流的微前端框架</h1>
+<ul>
+<li>Single-SPA<br>
+single-spa 是一个用于前端微服务化的 JavaScript 前端解决方案 (本身没有处理样式隔离， js 执行隔离) 实现了路由劫持和应用加载</li>
+<li>qiankun<br>
+基于Single-SPA, 提供了更加开箱即用的 API （ single-spa + sandbox+ import-html-entry ） 做到了，技术栈无关、并且接入简单（像iframe 一样简单）</li>
+</ul>
+<p>总结：子应用可以独立构建，运行时动态加载，主子应用完全解耦，技术栈无关，靠的是协议接入（子应用必须导出bootstrap、mount、unmount方法)<br>
+iframe中的子应用切换路由时用户刷新页面就回去了<br>
+应用通信：基于URL来进行数据传递，但是传递消息能力弱(最简单)、基于props主子应用间通信、使用全局变量、 Redux 进行通信<br>
+相比于single-spa，qiankun解决了JS沙盒环境，不需要我们自己去进行处理。在single-spa的开发过程中，我们需要自己手动的去写调用子应用JS的方法（如上面的 createScript方法），而qiankun不需要，乾坤只需要传入响应的apps的配置即可，会帮助我们去加载。还有一个就是他们本质的区别</p>
+<h1 id="微前端原理">微前端原理</h1>
+<p>微前端三个问题：</p>
+<ol>
+<li>子应用如何定义和使用？<br>
+关键 api 是 registerApplication，这里需要传入 app、activeWhen（会监听路由变化并劫持更改原生方法，应用路由判断逻辑）</li>
+<li>如何动态加载？<br>
+import-html-entry</li>
+<li>如何隔离？<br>
+样式隔离通过shadow dom，内部所有节点的样式对树外面的节点无效，因此自然就实现了样式隔离。<br>
+有个js沙箱机制，沙箱创造一个干净的环境给子应用使用，当切换时，可以选择丢弃属性和恢复属性<br>
+组合式应用路由分发。通过父类对路由的检测，动态的对子应用进行卸载或挂载。<br>
+浏览器首次打开父类应用的时候，第一步就是先使用调用registerApplication注册app，接下来判断当前的路由是属于哪一个子应用的，他的判断依据就是apps中的activeWhen，接下来就会将当前的子应用划分状态，appToLoad,appToUnmounted, appToMounted。接下来根据子应用的状态，先去执行需要卸载的子应用，卸载完成之后，就会去执行状态为appToLoad, appToMounted的子应用，那么在最后在执行相应的回调函数，也就是我们在子应用中注册的那些生命周期。
+<a href="https://blog.51cto.com/palxp/5712485">https://blog.51cto.com/palxp/5712485</a></li>
+</ol>
+<h1 id="性能优化">性能优化：</h1>
+<ol>
+<li>预加载<br>
+微应用的加载实际并不是越早越好，要在主应用完成加载和渲染之后的空闲时间，再启动微应用的加载。毕竟浏览器的请求并发存在限制，且qiankun是通过解析 HTML 模板，重构 XHR 的 HTTP 请求，来进行 JS 和 CSS 资源的请求，其 HTTP 的请求压力就更大了。<br>
+因此选择在 Layout 组件挂载之后进行预加载。<br>
+qiankun预加载的属性是prefetch，默认为 true。</li>
+</ol>
+<ul>
+<li>配置为 true 则会在第一个微应用 mount 完成后开始预加载其他微应用的静态资源</li>
+<li>配置为 &lsquo;all&rsquo; 则主应用 start 后即开始预加载所有微应用静态资源</li>
+<li>可以配置成数组的形式，指定加载哪些微应用
+因此设置为&rsquo;all&rsquo;</li>
+</ul>
+<ol start="2">
+<li>依赖库共享<br>
+官方推荐方案webpack的externals能够将一些第三方包通过外部扩展的方式，通过 CDN 的方式引入到项目中，使用 CDN 加载第三方库的数量不宜过多，过多的CDN请求，会占据浏览器并发请求数，导致父应用加载速度变慢。</li>
+<li>请求数据共享
+页面需要后台数据到达之后才能渲染对用户有意义的页面。initGlobalState(state)定义全局状态，并返回通信方法，建议在主应用使用，微应用通过 props 获取通信方法。</li>
+<li>优化qiankun执行性能<br>
+with（作用在于改变作用域。强制所有子应用的js的作用域都是同一作用域。）语句执行带来性能问题，主要是为了 document, location 去 proxy window 上找，这样就可以使用自定义的 document window。 但是 with 的问题就是会阻止代码执行时候的优化。github上有个方法是像沙盒可以提供独立的 window 实例一样，提供独立的 document 实例。<br>
+2.8 之后增加了性能加载模式，通过{ sandbox: { speedy: true } }开启，在保留沙箱的模式基础上做了window和document 实例的性能优化。</li>
+</ol>
+<h1 id="iframe问题">iframe问题</h1>
+<p>iframe 最大的特性就是提供了浏览器原生的硬隔离方案，不论是样式隔离、js 隔离这类问题统统都能被完美解决。但他的最大问题也在于他的隔离性无法被突破，导致应用间上下文无法被共享，随之带来的开发体验、产品体验的问题。</p>
+<ol>
+<li>url 不同步。浏览器刷新 iframe url 状态丢失、后退前进按钮无法使用。</li>
+<li>UI 不同步，DOM 结构不共享。想象一下屏幕右下角 1/4 的 iframe 里来一个带遮罩层的弹框，同时我们要求这个弹框要浏览器居中显示，还要浏览器 resize 时自动居中..</li>
+<li>全局上下文完全隔离，内存变量不共享。iframe 内外系统的通信、数据同步等需求，主应用的 cookie 要透传到根域名都不同的子应用中实现免登效果。</li>
+<li>慢。每次子应用进入都是一次浏览器上下文重建、资源重新加载的过程。</li>
+</ol>
+<p>其中有的问题比较好解决(问题1)，有的问题我们可以睁一只眼闭一只眼(问题4)，但有的问题我们则很难解决(问题3)甚至无法解决(问题2)，而这些无法解决的问题恰恰又会给产品带来非常严重的体验问题， 最终导致我们舍弃了 iframe 方案。</p>
+<h1 id="iframe与微前端对比">iframe与微前端对比</h1>
+<p>iframe（无界兼容微前端）<br>
+1.改造快，对所有跳转做同意拦截处理，保证URL同步刷新能正常进退。<br>
+2.原生隔离，效果好<br>
+3.测试回归只需要针对url跳转重点验证<br>
+iframe 的 src和主应用的域名是一致的，也就是说子应用运行的 iframe 沙箱和主应用是同域的，对于同域的iframe，可以共享内存通信了无需 postMessage 这种方式<br>
+弊端：弹窗居中（手动移动可优化）、页面跳转url不会同步，前进后退需要特殊处理（iframe 页面内部的跳转虽然不会让浏览器地址栏发生变化，但是却会产生一个看不见的“history 记录”，也就是点击前进或后退按钮（history.forward()或history.back()）可以让 iframe 页面也前进后退，但是地址栏无任何变化。）<br>
+适合：没有弹窗、浮层、高度固定（不固定则要动态计算iframe 的内容高度赋值给 iframe）的纯信息展示页</p>
+<h1 id="弊端">弊端</h1>
+<ol>
+<li>改造慢，所有接口都要改成支持跨域、绝对路径，所有页面都需要二次改造</li>
+<li>隔离有兼容问题</li>
+<li>所有页面重新测试回归</li>
+</ol>
+
+
+                
+                
+<div class="entry-shang text-center">
+    
+	    <p>「真诚赞赏，手留余香」</p>
+	
+	<button class="zs show-zs btn btn-bred">赞赏支持</button>
+</div>
+<div class="zs-modal-bg"></div>
+<div class="zs-modal-box">
+	<div class="zs-modal-head">
+		<button type="button" class="close">×</button>
+		<span class="author"><a href="https://zhaohuabing.com"><img src="/img/favicon.png" />Cici Blog</a></span>
+        
+	        <p class="tip"><i></i><span>真诚赞赏，手留余香</span></p>
+		
+ 
+	</div>
+	<div class="zs-modal-body">
+		<div class="zs-modal-btns">
+			<button class="btn btn-blink" data-num="2">2元</button>
+			<button class="btn btn-blink" data-num="5">5元</button>
+			<button class="btn btn-blink" data-num="10">10元</button>
+			<button class="btn btn-blink" data-num="50">50元</button>
+			<button class="btn btn-blink" data-num="100">100元</button>
+			<button class="btn btn-blink" data-num="1">任意金额</button>
+		</div>
+		<div class="zs-modal-pay">
+			<button class="btn btn-bred" id="pay-text">2元</button>
+			<p>使用<span id="pay-type">微信</span>扫描二维码完成支付</p>
+			<img src="/img/reward/wechat-2.png"  id="pay-image"/>
+		</div>
+	</div>
+	<div class="zs-modal-footer">
+		<label><input type="radio" name="zs-type" value="wechat" class="zs-type" checked="checked"><span ><span class="zs-wechat"><img src="/img/reward/wechat-btn.png"/></span></label>
+		<label><input type="radio" name="zs-type" value="alipay" class="zs-type" class="zs-alipay"><img src="/img/reward/alipay-btn.png"/></span></label>
+	</div>
+</div>
+<script type="text/javascript" src="/js/reward.js"></script>
+
+                
+
+                
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/readme/" data-toggle="tooltip" data-placement="top" title="Clean White Theme for Hugo">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/2023-04-04-vue3-json-schema-form/" data-toggle="tooltip" data-placement="top" title="基于JSON Schema的表单生成器">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+                
+
+                
+
+
+
+            </div>
+
+            
+            
+            <div class="
+                col-lg-2 col-lg-offset-0
+                visible-lg-block
+                sidebar-container
+                catalog-container">
+                <div class="side-catalog">
+                    <hr class="hidden-sm hidden-xs">
+                    <h5>
+                        <a class="catalog-toggle" href="#">CATALOG</a>
+                    </h5>
+                    <ul class="catalog-body"></ul>
+                </div>
+            </div>
+            
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        <a href="/tags/tag1" title="tag1">
+                            tag1
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/tag2" title="tag2">
+                            tag2
+                        </a>
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="https://zhaozhihan.com">Linda的博客</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">                  
+                    
+                    <li>
+                        <a href="mailto:1901177100@qq.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		           
+                    
+                    
+                    
+                    
+
+		            
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/Cicici-Shi">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+           
+                   <li>
+                       <a href='' rel="alternate" type="application/rss+xml" title="Cici Blog" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fas fa-circle fa-stack-2x"></i>
+                               <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+            
+             </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Cici Blog 2023
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+    function generateCatalog(selector) {
+
+        
+        
+        
+        
+            _containerSelector = 'div.post-container'
+        
+
+        
+        var P = $(_containerSelector), a, n, t, l, i, c;
+        a = P.find('h1,h2,h3,h4,h5,h6');
+
+        
+        $(selector).html('')
+
+        
+        a.each(function () {
+            n = $(this).prop('tagName').toLowerCase();
+            i = "#" + $(this).prop('id');
+            t = $(this).text();
+            c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+            l = $('<li class="' + n + '_nav"></li>').append(c);
+            $(selector).append(l);
+        });
+        return true;
+    }
+
+    generateCatalog(".catalog-body");
+
+    
+    $(".catalog-toggle").click((function (e) {
+        e.preventDefault();
+        $('.side-catalog').toggleClass("fold")
+    }))
+
+    
+
+
+    loadAsync("\/js\/jquery.nav.js", function () {
+        $('.catalog-body').onePageNav({
+            currentClass: "active",
+            changeHash: !1,
+            easing: "swing",
+            filter: "",
+            scrollSpeed: 700,
+            scrollOffset: 0,
+            scrollThreshold: .2,
+            begin: null,
+            end: null,
+            scrollChange: null,
+            padding: 80
+        });
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
