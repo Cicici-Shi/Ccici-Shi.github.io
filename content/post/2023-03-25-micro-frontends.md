@@ -1,7 +1,7 @@
 ---
 title: "微前端"
 subtitle: ""
-description: ""
+description: "文章介绍了微前端的概念、原理和性能优化方式，以及相比之下iframe的特点。"
 date: 2023-03-25
 author: 施艳春
 image: ""

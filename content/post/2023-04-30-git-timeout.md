@@ -1,13 +1,14 @@
 ---
 title: "【git错误】Error: Failed to connect to github.com port 443 after 21074 ms: Timed out"
 subtitle: ""
-description: ""
+description: "github使用中，逐渐频繁出现git超时的问题，可以使用更改host配置的方式来解决这个问题。"
 date: 2023-04-30
 author: 施艳春
 image: ""
 tags: ["fe", "note"]
 categories: ["Tech"]
 ---
+github使用中，逐渐频繁出现git超时的问题，可以使用更改host配置的方式来解决这个问题。
 
 # 操作
 

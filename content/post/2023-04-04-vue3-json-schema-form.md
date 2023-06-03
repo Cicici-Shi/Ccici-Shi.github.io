@@ -1,7 +1,7 @@
 ---
 title: "基于JSON Schema的表单生成器"
 subtitle: "一种快速、灵活、可扩展的表单开发方案"
-description: ""
+description: "一个基于Vue3和JSON Schema的表单生成器，它可以根据提供的JSON Schema来生成对应的表单，支持自定义组件、自定义错误信息配置和验证规则。"
 date: 2023-04-04
 author: 施艳春
 image: ""
@@ -12,7 +12,6 @@ categories: ["Tech"]
 演示地址：[https://vue3-json-schema-form.vercel.app/](https://vue3-json-schema-form.vercel.app/)
 
 # 什么是 JSON Schema
-
 JSON Schema 是一种用于描述和验证 JSON 数据结构的规范。它可以用来定义数据的类型、格式、约束等属性，以及为数据提供文档和注释。
 
 ## 特点：
